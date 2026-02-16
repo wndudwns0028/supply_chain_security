@@ -1,7 +1,7 @@
 name: Generate SBOM Report with Syft
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: # add
   push:
     branches:
       - master
@@ -28,5 +28,5 @@ jobs:
     - name: Upload SBOM Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: sbom-report
-        path: sbom.xml
+        name: spdx-report #modified
+        path: spdx.json #modified
